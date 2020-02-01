@@ -1,11 +1,11 @@
-import { app, BrowserWindow, screen } from 'electron';
+import { app, BrowserWindow, screen , ipcMain} from 'electron';
 import * as path from 'path';
 import * as url from 'url';
 
 let win: BrowserWindow = null;
 const args = process.argv.slice(1),
     serve = args.some(val => val === '--serve');
-
+//some
 function createWindow(): BrowserWindow {
 
   const electronScreen = screen;
@@ -79,3 +79,7 @@ try {
   // Catch Error
   // throw e;
 }
+console.log('window');
+ipcMain.on("one",(event,data)=>{
+  console.log(data);
+})

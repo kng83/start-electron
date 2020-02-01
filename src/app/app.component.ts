@@ -25,4 +25,8 @@ export class AppComponent {
       console.log('Mode web');
     }
   }
+  checkElectron(){
+    console.log('send to electron');
+     this.electronService.ipcRenderer.send("one",{cat:'bobo'});
+  }
 }

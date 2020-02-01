@@ -6,6 +6,10 @@
     "baseUrl": "",
     "types": []
   },
+  "angularCompilerOptions": {
+    "enableIvy": true
+  },
+
   "exclude": [
     "**/*.spec.ts"
   ]
